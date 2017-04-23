@@ -1,6 +1,7 @@
 @import "base/defaults.css";
 @import "base/helpers.css";
 
-@import "komponente/prostor.css";
+@import "komponente/kafana.css";
 @import "komponente/stolovi.css";
-@import "komponente/meni.css";
+@import "komponente/prozor.css";
+@import "komponente/karta-pica.css";

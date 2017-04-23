@@ -1,0 +1,19 @@
+.prozor {
+  background: white;
+  display: none;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 1000px;
+  padding: 20px 40px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 1000px;
+}
+
+.zatvori {
+  cursor: pointer;
+  float: right;
+  font-size: 44px;
+}
