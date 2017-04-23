@@ -1,15 +1,27 @@
+const element = document.getElementById('prozor')
+let trenutniSto = null
+
 export default class Prozor {
-  constructor(id = 'prozor') {
-    this.element = document.getElementById(id)
-
-    document.getElementById('zatvori').onclick = this.zatvori.bind(this)
+  static otvori(sto) {
+    element.style.display = 'block'
+    trenutniSto = sto
   }
 
-  otvori() {
-    this.element.style.display = 'block'
+  static zatvori() {
+    element.style.display = 'none'
+    trenutniSto = null
   }
 
-  zatvori() {
-    this.element.style.display = 'none'
+  static otkazi() {
+    trenutniSto.otkaziTuru()
+    Prozor.zatvori()
+  }
+
+  static potvrdi() {
+    trenutniSto.potvrdiTuru()
+    Prozor.zatvori()
   }
 }
+
+document.getElementById('otkazi').onclick = Prozor.otkazi
+document.getElementById('potvrdi').onclick = Prozor.potvrdi

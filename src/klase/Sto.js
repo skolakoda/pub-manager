@@ -1,33 +1,53 @@
-import Prozor from './Prozor'
-const prozor = new Prozor()
 import KartaPica from './KartaPica'
+import Prozor from './Prozor'
+
+const aktivniSto = document.getElementById('aktivni-sto')
 
 export default class Sto {
-  constructor(id) {
+  constructor(id, ime) {
     this.element = document.getElementById(id)
+    this.ime = ime
     this.pica = []
+    this.novaTura = []
     this.element.addEventListener('click', this.otvori.bind(this))
   }
 
   otvori() {
-    prozor.otvori()
-    KartaPica.render()
+    Prozor.otvori(this)
+    KartaPica.render(this)
+    this.render()
   }
 
   dodaj(pice) {
-    this.pica.push(pice)
-    // document.getElementById('ukupno').innerHTML = this.ukupno
+    this.novaTura.push(pice)
+    this.render()
   }
 
-  undo() {
-    // this.pica skida otpozadi
+  otkaziTuru() {
+    this.novaTura = []
   }
 
-  get ukupno() {
+  potvrdiTuru() {
+    this.pica = this.pica.concat(this.novaTura)
+    this.novaTura = []
+  }
+
+  /* return int */
+  get noviDug() {
+    return this.novaTura.map(p => p.cena).reduce((a, b) => a + b, 0)
+  }
+
+  /* return int */
+  get dug() {
     return this.pica.map(p => p.cena).reduce((a, b) => a + b, 0)
   }
 
+  // na OK dodati noviDug dugu
   render() {
-    // narudzbina
+    aktivniSto.innerHTML = `
+      <h1>${this.ime}</h1>
+      <p>DUG: ${this.dug}</p>
+      <p>NOVA TURA: ${this.noviDug}</p>
+    `
   }
 }
