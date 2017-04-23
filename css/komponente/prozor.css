@@ -17,3 +17,9 @@
   float: right;
   font-size: 44px;
 }
+
+.dugmici {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}

@@ -32,6 +32,11 @@ export default class Sto {
     this.novaTura = []
   }
 
+  reset() {
+    this.pica = []
+    this.novaTura = []
+  }
+
   /* return int */
   get noviDug() {
     return this.novaTura.map(p => p.cena).reduce((a, b) => a + b, 0)
@@ -42,12 +47,26 @@ export default class Sto {
     return this.pica.map(p => p.cena).reduce((a, b) => a + b, 0)
   }
 
-  // na OK dodati noviDug dugu
   render() {
     aktivniSto.innerHTML = `
       <h1>${this.ime}</h1>
       <p>DUG: ${this.dug}</p>
       <p>NOVA TURA: ${this.noviDug}</p>
     `
+  }
+
+  stampajRacun() {
+    let sablon = `
+      <h1>${this.ime}</h1>
+      <ul>
+    `
+    this.pica.map(pice => {
+      sablon += `<li><span>${pice.naziv}</span>: <span>${pice.cena}</span></li>`
+    })
+    sablon += `
+      </ul>
+      <p><b>UKUPNO</b>: ${this.dug}</p>
+    `
+    aktivniSto.innerHTML = sablon
   }
 }
