@@ -9,13 +9,16 @@ export default class KartaPica {
 
   static render(sto) {
     KartaPica.clear()
-    const ul = document.createElement('ul')
+    const div = document.createElement('div')
     pica.map(pice => {
-      const li = document.createElement('li')
-      li.innerHTML = `<span>${pice.naziv}</span>: <span>${pice.cena}</span>`
-      li.onclick = () => sto.dodaj(pice)
-      ul.appendChild(li)
+      const p = document.createElement('p')
+      p.innerHTML = `
+      <img src="${pice.slika}">
+      <span>${pice.naziv}</span>: <span>${pice.cena}</span>
+      `
+      p.onclick = () => sto.dodaj(pice)
+      div.appendChild(p)
     })
-    element.appendChild(ul)
+    element.appendChild(div)
   }
 }

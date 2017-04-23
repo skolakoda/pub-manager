@@ -1,0 +1,8 @@
+.karta-pica p {
+  cursor: pointer;
+}
+
+.karta-pica img {
+  height: 50px;
+  vertical-align: middle;
+}
