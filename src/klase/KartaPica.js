@@ -1,31 +1,21 @@
 import {pica} from '../podaci/pica'
 
+const element = document.getElementById('karta-pica')
+
 export default class KartaPica {
-  constructor(sto, id = 'meni') {
-    this.sto = sto
-    this.element = document.getElementById(id)
-    this.element.appendChild(this.render())
-    document.getElementById('zatvori').onclick = this.zatvori.bind(this)
-  }
 
-  render() {
-    const sto = this.sto
-    const div = document.createElement('div')
-    div.innerHTML = `<h1>${sto.element.id}</h1>`
+  static render() {
+    let sablon = '<h1>Karta pića</h1>'
     pica.map(pice => {
-      const p = document.createElement('p')
-      p.innerHTML = `<span>${pice.naziv}</span>: <span>${pice.cena}</span>`
-      p.onclick = () => sto.dodaj(pice)
-      div.appendChild(p)
+      const li = document.createElement('li')
+      li.innerHTML = `<span>${pice.naziv}</span>: <span>${pice.cena}</span>`
+      console.log(li)
+      sablon += `
+      <li><span>${pice.naziv}</span>: <span>${pice.cena}</span></li>
+      `
     })
-    return div
-  }
-
-  otvori() {
-    this.element.style.display = 'block'
-  }
-
-  zatvori() {
-    this.element.style.display = 'none'
+    element.innerHTML = sablon
   }
 }
+
+// karta pica mora znati koji sto je poziva
