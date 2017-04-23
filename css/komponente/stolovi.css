@@ -1,0 +1,45 @@
+.sto {
+  background: brown;
+  cursor: pointer;
+  font-size: 44px;
+  height: 200px;
+  line-height: 200px;
+  position: absolute;
+  text-align: center;
+  width: 200px;
+}
+
+#sto1 {
+  left: 100px;
+  top: 100px;
+}
+
+#sto2 {
+  left: 600px;
+  top: 100px;
+}
+
+#sto3 {
+  left: 100px;
+  top: 400px;
+}
+
+#sto4 {
+  left: 100px;
+  top: 700px;
+}
+
+#sto5 {
+  left: 600px;
+  top: 400px;
+}
+
+#sto6 {
+  left: 600px;
+  top: 700px;
+}
+
+#sto2,
+#sto6 {
+  width: 300px;
+}

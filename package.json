@@ -1,0 +1,17 @@
+{
+  "name": "pub-manager",
+  "version": "1.0.0",
+  "description": "Pub manager application",
+  "main": "app.js",
+  "scripts": {
+    "start": "webpack-dev-server --open",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "mudroljub",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^2.4.1",
+    "webpack-dev-server": "^2.4.3"
+  }
+}
