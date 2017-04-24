@@ -9,7 +9,8 @@ npm install
 npm start
 ```
 
-ili
+Za pokretanje na desktopu:
+
 ```
 npm run electron
 ```
