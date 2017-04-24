@@ -1,7 +1,16 @@
 import KartaPica from './KartaPica'
 import Prozor from './Prozor'
 
-const aktivniSto = document.getElementById('aktivni-sto')
+const izlaz = document.getElementById('aktivni-sto')
+
+// prima narudzbinu[], vraca objekat popijenih pica
+const presekStanja = narudzbina => {
+  const stanje = {}
+  narudzbina.map(pice => {
+    stanje[pice.naziv] = stanje[pice.naziv] ? stanje[pice.naziv] + 1 : 1
+  })
+  return stanje
+}
 
 export default class Sto {
   constructor(id, ime) {
@@ -37,36 +46,42 @@ export default class Sto {
     this.novaTura = []
   }
 
-  /* return int */
   get noviDug() {
     return this.novaTura.map(p => p.cena).reduce((a, b) => a + b, 0)
   }
 
-  /* return int */
   get dug() {
     return this.pica.map(p => p.cena).reduce((a, b) => a + b, 0)
   }
 
   render() {
-    aktivniSto.innerHTML = `
+    const presek = presekStanja(this.novaTura)
+    izlaz.innerHTML = `
       <h1>${this.ime}</h1>
-      <p>DUG: ${this.dug}</p>
-      <p>NOVA TURA: ${this.noviDug}</p>
+      <p>CEH: ${this.dug}</p>
+      <ul>
     `
+    for (const naziv in presek) {
+      const komada = presek[naziv]
+      izlaz.innerHTML += `<li>${naziv} x ${komada}</li>`
+    }
+    izlaz.innerHTML += '</ul>'
+    if (this.noviDug) izlaz.innerHTML += `<p>NOVA TURA: ${this.noviDug}</p>`
   }
 
-  stampajRacun() {
-    let sablon = `
+  pokaziRacun() {
+    const presek = presekStanja(this.pica)
+    izlaz.innerHTML = `
       <h1>${this.ime}</h1>
       <ul>
     `
-    this.pica.map(pice => {
-      sablon += `<li><span>${pice.naziv}</span>: <span>${pice.cena}</span></li>`
-    })
-    sablon += `
+    for (const naziv in presek) {
+      const komada = presek[naziv]
+      izlaz.innerHTML += `<li>${naziv} x ${komada}</li>`
+    }
+    izlaz.innerHTML += `
       </ul>
       <p><b>UKUPNO</b>: ${this.dug}</p>
     `
-    aktivniSto.innerHTML = sablon
   }
 }

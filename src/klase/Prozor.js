@@ -24,7 +24,7 @@ export default class Prozor {
   }
 
   static racun() {
-    trenutniSto.stampajRacun()
+    trenutniSto.pokaziRacun()
   }
 
   static reset() {

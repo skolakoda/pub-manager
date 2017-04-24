@@ -1,5 +1,9 @@
 body {
   background-color: #88A825;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 h1 {

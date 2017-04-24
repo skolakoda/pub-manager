@@ -7,6 +7,14 @@ export default class KartaPica {
     element.innerHTML = ''
   }
 
+  // static cena(pice) {
+  //   let cena
+  //   pica.map(p => {
+  //     if (p.naziv == pice) cena = p.cena
+  //   })
+  //   return cena
+  // }
+
   static render(sto) {
     KartaPica.clear()
     const div = document.createElement('div')
