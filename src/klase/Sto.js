@@ -58,7 +58,7 @@ export default class Sto {
     const presek = presekStanja(this.novaTura)
     izlaz.innerHTML = `
       <h1>${this.ime}</h1>
-      <p>CEH: ${this.dug}</p>
+      <p>DUG: ${this.dug}</p>
       <ul>
     `
     for (const naziv in presek) {
