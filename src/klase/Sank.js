@@ -1,28 +1,42 @@
+import KartaPica from './KartaPica'
+
+const izdataPica = {}
+const element = document.querySelector('#sank')
+
+// singlton
 export default class Sank {
-  constructor() {
-    this.kartaPica = {}
-    this.izdataPica = []  // map
-    this.naplacenaPica = [] // map
+
+  static izdajPice(mapaPica) {
+    for (const naziv in mapaPica) {
+      if (naziv in izdataPica) izdataPica[naziv] += mapaPica[naziv]
+      else izdataPica[naziv] = mapaPica[naziv]
+    }
   }
 
-  izdajPice(pice) {
-    // this.izdataPica.push(pice)
+  static get pazar() {
+    let ukupno = 0
+    for (const pice in izdataPica) {
+      const cena = KartaPica.cena(pice)
+      ukupno += izdataPica[pice] * cena
+    }
+    return ukupno
   }
 
-  get ukupnoIzdato() {
-    // izdataPica.map.reduce cena
+  static get sacuvajStanje() {
+
   }
 
-  // alias dnevniPazar
-  get ukupnoNaplaceno() {
-    // naplacenaPica.map.reduce cena
-  }
-
-  get jelBilans() {
-    return this.ukupnoIzdato === this.ukupnoNaplaceno
-  }
-
-  get sacuvajStanje() {
-
+  static render() {
+    let sablon = '<b>Dnevni pazar</b><ul>'
+    for (const pice in izdataPica) {
+      sablon += `<li>${pice} x ${izdataPica[pice]}</li>`
+    }
+    sablon += `
+      </ul>
+      <b>ukupno: ${Sank.pazar}</b>
+    `
+    element.innerHTML = sablon
   }
 }
+
+element.addEventListener('click', Sank.render)

@@ -1,19 +1,20 @@
 import {pica} from '../podaci/pica'
 const element = document.getElementById('karta-pica')
 
+// singlton
 export default class KartaPica {
 
   static clear() {
     element.innerHTML = ''
   }
 
-  // static cena(pice) {
-  //   let cena
-  //   pica.map(p => {
-  //     if (p.naziv == pice) cena = p.cena
-  //   })
-  //   return cena
-  // }
+  static cena(pice) {
+    let cena
+    pica.map(p => {
+      if (p.naziv == pice) cena = p.cena
+    })
+    return cena
+  }
 
   static render(sto) {
     KartaPica.clear()

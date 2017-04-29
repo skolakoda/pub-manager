@@ -2,6 +2,7 @@
   "env": {
       "browser": true,
       "node": true,
+      "es6": true
   },
   "globals": {
       "angular": false,
@@ -9,7 +10,7 @@
   },
   "rules": {
       "semi": ["warn", "never"],
-      "quotes": ["error", "single"],
+      "quotes": ["warn", "single"],
       "no-undef": "error",
       "no-unused-vars": "error",
       "no-redeclare": "error",
@@ -38,11 +39,14 @@
       "no-duplicate-imports": "error",
       "no-var": "error",
       "object-shorthand": "error",
-      "prefer-const": "warn",
       "no-invalid-this": "error",
+      "no-unexpected-multiline": "error",
+      "prefer-const": "warn",
       "space-infix-ops": "warn",
       "comma-spacing": ["warn", { "before": false, "after": true }],
-      "spaced-comment": ["warn", "always"]
+      "spaced-comment": ["warn", "always"],
+      "camelcase": "warn",
+      "new-cap": "warn"
   },
   "parserOptions": {
       "ecmaVersion": 8,

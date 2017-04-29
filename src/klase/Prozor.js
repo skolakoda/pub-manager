@@ -1,7 +1,9 @@
 const element = document.getElementById('prozor')
 let trenutniSto = null
 
+// singlton
 export default class Prozor {
+
   static otvori(sto) {
     element.style.display = 'block'
     trenutniSto = sto

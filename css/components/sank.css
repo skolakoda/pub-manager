@@ -1,0 +1,9 @@
+.sank {
+  width: 100px;
+  height: 400px;
+  top: 400px;
+  position: absolute;
+  background: #CF4A30;
+  border: 10px solid #000;
+  border-left-color: transparent;
+}

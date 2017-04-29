@@ -1,16 +1,9 @@
 import KartaPica from './KartaPica'
 import Prozor from './Prozor'
+import Sank from './Sank'
+import presekStanja from '../funkcije/presekStanja'
 
 const izlaz = document.getElementById('aktivni-sto')
-
-// prima narudzbinu[], vraca objekat popijenih pica
-const presekStanja = narudzbina => {
-  const stanje = {}
-  narudzbina.map(pice => {
-    stanje[pice.naziv] = stanje[pice.naziv] ? stanje[pice.naziv] + 1 : 1
-  })
-  return stanje
-}
 
 export default class Sto {
   constructor(id, ime) {
@@ -37,6 +30,8 @@ export default class Sto {
   }
 
   potvrdiTuru() {
+    const presek = presekStanja(this.novaTura)
+    Sank.izdajPice(presek)
     this.pica = this.pica.concat(this.novaTura)
     this.novaTura = []
   }
