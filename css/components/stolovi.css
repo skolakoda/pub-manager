@@ -9,37 +9,37 @@
   width: 200px;
 }
 
-#sto1 {
+.sto1 {
   left: 200px;
   top: 100px;
 }
 
-#sto2 {
+.sto2 {
   left: 600px;
   top: 100px;
 }
 
-#sto3 {
+.sto3 {
   left: 200px;
   top: 400px;
 }
 
-#sto4 {
+.sto4 {
   left: 200px;
   top: 700px;
 }
 
-#sto5 {
+.sto5 {
   left: 600px;
   top: 400px;
 }
 
-#sto6 {
+.sto6 {
   left: 600px;
   top: 700px;
 }
 
-#sto2,
-#sto6 {
+.sto2,
+.sto6 {
   width: 300px;
 }
