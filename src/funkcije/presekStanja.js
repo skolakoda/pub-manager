@@ -1,11 +1,11 @@
 /**
-* @param [] pica
-* @return {} ime, broj
+* @param: niz [] pica
+* @return: mapa {} ime, broj
 */
-const presekStanja = narudzbina => {
+const presekStanja = pica => {
   const stanje = {}
-  narudzbina.map(pice => {
-    stanje[pice.naziv] = stanje[pice.naziv] ? stanje[pice.naziv] + 1 : 1
+  pica.map(p => {
+    stanje[p.naziv] = stanje[p.naziv] ? stanje[p.naziv] + 1 : 1
   })
   return stanje
 }

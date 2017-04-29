@@ -1,5 +1,5 @@
 import {pica} from '../podaci/pica'
-const element = document.getElementById('karta-pica')
+const element = document.getElementById('render-pica')
 
 // singlton
 export default class KartaPica {

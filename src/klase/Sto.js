@@ -3,7 +3,7 @@ import Narudzbina from './Narudzbina'
 import Sank from './Sank'
 import presekStanja from '../funkcije/presekStanja'
 
-const izlaz = document.getElementById('aktivni-sto')
+const izlaz = document.getElementById('render-aktivni-sto')
 
 export default class Sto {
   constructor(id, ime) {
