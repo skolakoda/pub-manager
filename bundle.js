@@ -228,7 +228,7 @@ class KartaPica {
 const element = document.getElementById('prozor')
 let trenutniSto = null
 
-class Prozor {
+class Narudzbina {
   static otvori(sto) {
     element.style.display = 'block'
     trenutniSto = sto
@@ -241,13 +241,13 @@ class Prozor {
 
   static otkazi() {
     trenutniSto.otkaziTuru()
-    Prozor.zatvori()
+    Narudzbina.zatvori()
     document.getElementById('potvrdi').style.display = 'inline'
   }
 
   static potvrdi() {
     trenutniSto.potvrdiTuru()
-    Prozor.zatvori()
+    Narudzbina.zatvori()
   }
 
   static racun() {
@@ -256,16 +256,16 @@ class Prozor {
 
   static reset() {
     trenutniSto.reset()
-    Prozor.zatvori()
+    Narudzbina.zatvori()
   }
 }
-/* harmony export (immutable) */ __webpack_exports__["a"] = Prozor;
+/* harmony export (immutable) */ __webpack_exports__["a"] = Narudzbina;
 
 
-document.getElementById('otkazi').onclick = Prozor.otkazi
-document.getElementById('potvrdi').onclick = Prozor.potvrdi
-document.getElementById('racun').onclick = Prozor.racun
-document.getElementById('reset').onclick = Prozor.reset
+document.getElementById('otkazi').onclick = Narudzbina.otkazi
+document.getElementById('potvrdi').onclick = Narudzbina.potvrdi
+document.getElementById('racun').onclick = Narudzbina.racun
+document.getElementById('reset').onclick = Narudzbina.reset
 
 
 /***/ }),

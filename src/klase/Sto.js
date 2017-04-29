@@ -1,5 +1,5 @@
 import KartaPica from './KartaPica'
-import Prozor from './Prozor'
+import Narudzbina from './Narudzbina'
 import Sank from './Sank'
 import presekStanja from '../funkcije/presekStanja'
 
@@ -15,7 +15,7 @@ export default class Sto {
   }
 
   otvori() {
-    Prozor.otvori(this)
+    Narudzbina.otvori(this)
     KartaPica.render(this)
     this.render()
   }

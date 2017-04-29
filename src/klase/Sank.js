@@ -2,6 +2,8 @@ import KartaPica from './KartaPica'
 
 const izdataPica = {}
 const element = document.querySelector('#sank')
+const pazarProzor = document.querySelector('#pazar')
+const renderPazar = document.querySelector('#render-pazar')
 
 // singlton
 export default class Sank {
@@ -22,21 +24,27 @@ export default class Sank {
     return ukupno
   }
 
-  static get sacuvajStanje() {
+  static otvoriPazar() {
+    pazarProzor.style.display = 'block'
+    console.log('otvoriPazar')
+  }
 
+  static zatvoriPazar() {
+    pazarProzor.style.display = 'none'
   }
 
   static render() {
-    let sablon = '<b>Dnevni pazar</b><ul>'
+    renderPazar.innerHTML = '<ul>'
     for (const pice in izdataPica) {
-      sablon += `<li>${pice} x ${izdataPica[pice]}</li>`
+      renderPazar.innerHTML += `<li>${pice} x ${izdataPica[pice]}</li>`
     }
-    sablon += `
+    renderPazar.innerHTML += `
       </ul>
-      <b>ukupno: ${Sank.pazar}</b>
+      <p><b>ukupno: ${Sank.pazar}</b></p>
     `
-    element.innerHTML = sablon
   }
 }
 
 element.addEventListener('click', Sank.render)
+element.addEventListener('click', Sank.otvoriPazar)
+document.getElementById('zatvori-pazar').onclick = Sank.zatvoriPazar

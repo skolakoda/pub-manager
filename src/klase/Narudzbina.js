@@ -1,8 +1,8 @@
-const element = document.getElementById('prozor')
+const element = document.getElementById('narudzbina')
 let trenutniSto = null
 
 // singlton
-export default class Prozor {
+export default class Narudzbina {
 
   static otvori(sto) {
     element.style.display = 'block'
@@ -16,13 +16,13 @@ export default class Prozor {
 
   static otkazi() {
     trenutniSto.otkaziTuru()
-    Prozor.zatvori()
+    Narudzbina.zatvori()
     document.getElementById('potvrdi').style.display = 'inline'
   }
 
   static potvrdi() {
     trenutniSto.potvrdiTuru()
-    Prozor.zatvori()
+    Narudzbina.zatvori()
   }
 
   static racun() {
@@ -31,11 +31,11 @@ export default class Prozor {
 
   static reset() {
     trenutniSto.reset()
-    Prozor.zatvori()
+    Narudzbina.zatvori()
   }
 }
 
-document.getElementById('otkazi').onclick = Prozor.otkazi
-document.getElementById('potvrdi').onclick = Prozor.potvrdi
-document.getElementById('racun').onclick = Prozor.racun
-document.getElementById('reset').onclick = Prozor.reset
+document.getElementById('otkazi').onclick = Narudzbina.otkazi
+document.getElementById('potvrdi').onclick = Narudzbina.potvrdi
+document.getElementById('racun').onclick = Narudzbina.racun
+document.getElementById('reset').onclick = Narudzbina.reset
