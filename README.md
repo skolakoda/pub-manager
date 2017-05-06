@@ -1,3 +1,5 @@
+![](screen.png)
+
 # Pub manager
 
 Aplikacija za vođenje šanka.
