@@ -1,4 +1,4 @@
-![](screen.png)
+[![](screen.png)](https://mudroljub.github.io/pub-manager/)
 
 # Pub manager
 
