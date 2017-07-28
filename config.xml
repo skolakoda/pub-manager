@@ -4,10 +4,10 @@
     id          = "com.phonegap.example"
     version     = "1.0.0" >
 
-  <name>Wiki search</name>
+  <name>Pub manager</name>
 
   <description>
-      Live Wikipedia search.
+      Simple software for restaurants, cafes, bars
   </description>
 
   <author href="https://github.com/mudroljub">
