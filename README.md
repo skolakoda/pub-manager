@@ -24,4 +24,4 @@ Za pokretanje na desktopu:
 npm run electron
 ```
 
-Više info na [Školi koda](https://skolakoda.org/).
+Više info na [skolakoda.org](https://skolakoda.org/).
