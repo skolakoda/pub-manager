@@ -2,7 +2,7 @@
 
 # Pub manager
 
-Aplikacija za vođenje šanka. Otvorenog je koda i slobodna za upotrebu.
+Aplikacija za vođenje šanka. Jedna od aplikacija koje pravimo na [kursevima programiranja](https://skolakoda.org/kursevi/) u Školi koda.
 
 Pogledaj kako radi: [mudroljub.github.io/pub-manager](https://mudroljub.github.io/pub-manager/)
 
