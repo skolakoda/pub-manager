@@ -99,7 +99,7 @@ class KartaPica {
       p.innerHTML = `
       <img src=${pice.slika}>
       <span>${pice.naziv}</span>: <span>${pice.cena}</span>
-      `
+      `;
       p.onclick = () => sto.dodaj(pice)
       div.appendChild(p)
     })
