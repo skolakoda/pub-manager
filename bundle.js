@@ -97,7 +97,7 @@ class KartaPica {
     __WEBPACK_IMPORTED_MODULE_0__podaci_pica_json___default.a.map(pice => {
       const p = document.createElement('p')
       p.innerHTML = `
-      <img src="${pice.slika}">
+      <img src=${pice.slika}>
       <span>${pice.naziv}</span>: <span>${pice.cena}</span>
       `
       p.onclick = () => sto.dodaj(pice)
