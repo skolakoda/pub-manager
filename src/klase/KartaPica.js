@@ -22,7 +22,7 @@ export default class KartaPica {
     pica.map(pice => {
       const p = document.createElement('p')
       p.innerHTML = `
-      <img src="${pice.slika}">
+      <img src=${pice.slika}>
       <span>${pice.naziv}</span>: <span>${pice.cena}</span>
       `
       p.onclick = () => sto.dodaj(pice)
