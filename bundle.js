@@ -176,7 +176,7 @@ class Sto {
       <h1>${this.ime}</h1>
       <p>DUG: ${this.dug}</p>
       <ul>
-    `
+    `;
     for (const naziv in presek) {
       const komada = presek[naziv]
       izlaz.innerHTML += `<li>${naziv} x ${komada}</li>`
