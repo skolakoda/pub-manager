@@ -6,8 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --open",
     "build": "webpack",
-    "electron": "electron app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "electron": "electron app.js"
   },
   "author": "mudroljub",
   "license": "ISC",

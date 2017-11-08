@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 2);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -71,11 +71,12 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__podaci_pica__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__podaci_pica_json__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__podaci_pica_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__podaci_pica_json__);
 
 const element = document.getElementById('render-pica')
 
-// singlton
+// singlton klasa, ima samo statične metode
 class KartaPica {
 
   static clear() {
@@ -84,7 +85,7 @@ class KartaPica {
 
   static cena(pice) {
     let cena
-    __WEBPACK_IMPORTED_MODULE_0__podaci_pica__["a" /* pica */].map(p => {
+    __WEBPACK_IMPORTED_MODULE_0__podaci_pica_json___default.a.map(p => {
       if (p.naziv == pice) cena = p.cena
     })
     return cena
@@ -93,7 +94,7 @@ class KartaPica {
   static render(sto) {
     KartaPica.clear()
     const div = document.createElement('div')
-    __WEBPACK_IMPORTED_MODULE_0__podaci_pica__["a" /* pica */].map(pice => {
+    __WEBPACK_IMPORTED_MODULE_0__podaci_pica_json___default.a.map(pice => {
       const p = document.createElement('p')
       p.innerHTML = `
       <img src="${pice.slika}">
@@ -115,9 +116,9 @@ class KartaPica {
 
 "use strict";
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__KartaPica__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Narudzbina__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Sank__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__funkcije_presekStanja__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__Narudzbina__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__Sank__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__funkcije_presekStanja__ = __webpack_require__(4);
 
 
 
@@ -206,6 +207,12 @@ class Sto {
 
 /***/ }),
 /* 2 */
+/***/ (function(module, exports) {
+
+module.exports = [{"naziv":"točeno pivo","cena":140,"slika":"./images/pivo.jpg"},{"naziv":"malo točeno pivo","cena":90,"slika":"./images/pivo.jpg"},{"naziv":"rakija","cena":90,"slika":"./images/rakija.jpg"},{"naziv":"kafa","cena":60,"slika":"./images/kafa.png"}]
+
+/***/ }),
+/* 3 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -219,7 +226,7 @@ for (let i = 1; i < 7; i++) {
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -239,7 +246,7 @@ const presekStanja = pica => {
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -289,7 +296,7 @@ document.getElementById('reset').onclick = Narudzbina.reset
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -346,37 +353,6 @@ class Sank {
 element.addEventListener('click', Sank.render)
 element.addEventListener('click', Sank.otvoriPazar)
 document.getElementById('zatvori-pazar').onclick = Sank.zatvoriPazar
-
-
-/***/ }),
-/* 6 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-const pica = [
-  {
-    naziv: 'točeno pivo',
-    cena: 140,
-    slika: './images/pivo.jpg'
-  },
-  {
-    naziv: 'malo točeno pivo',
-    cena: 90,
-    slika: './images/pivo.jpg'
-  },
-  {
-    naziv: 'rakija',
-    cena: 90,
-    slika: './images/rakija.jpg'
-  },
-  {
-    naziv: 'kafa',
-    cena: 60,
-    slika: './images/kafa.png'
-  }
-]
-/* harmony export (immutable) */ __webpack_exports__["a"] = pica;
-
 
 
 /***/ })

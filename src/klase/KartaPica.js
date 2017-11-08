@@ -1,7 +1,7 @@
-import {pica} from '../podaci/pica'
+import pica from '../../podaci/pica.json'
 const element = document.getElementById('render-pica')
 
-// singlton
+// singlton klasa, ima samo statične metode
 export default class KartaPica {
 
   static clear() {
