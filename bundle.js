@@ -190,7 +190,7 @@ class Sto {
     izlaz.innerHTML = `
       <h1>${this.ime}</h1>
       <ul>
-    `
+    `;
     for (const naziv in presek) {
       const komada = presek[naziv]
       izlaz.innerHTML += `<li>${naziv} x ${komada}</li>`
