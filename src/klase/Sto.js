@@ -6,9 +6,9 @@ import presekStanja from '../funkcije/presekStanja'
 const izlaz = document.getElementById('render-aktivni-sto')
 
 export default class Sto {
-  constructor(id, ime) {
-    this.element = document.getElementById(id)
-    this.ime = ime
+  constructor(i) {
+    this.element = document.getElementById(`sto${i}`)
+    this.ime = `Sto ${i}`
     this.pica = []
     this.novaTura = []
     this.element.addEventListener('click', this.otvori.bind(this))

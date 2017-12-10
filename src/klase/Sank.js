@@ -26,7 +26,6 @@ export default class Sank {
 
   static otvoriPazar() {
     pazarProzor.style.display = 'block'
-    console.log('otvoriPazar')
   }
 
   static zatvoriPazar() {
