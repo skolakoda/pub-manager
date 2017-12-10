@@ -3,11 +3,11 @@
 * @return: mapa {} ime, broj
 */
 const presekStanja = pica => {
-  const stanje = {}
-  pica.map(p => {
-    stanje[p.naziv] = stanje[p.naziv] ? stanje[p.naziv] + 1 : 1
-  })
-  return stanje
+  const mapa = {}
+  pica.map(p =>
+    mapa[p.naziv] = mapa[p.naziv] ? mapa[p.naziv] + 1 : 1
+  )
+  return mapa
 }
 
 export default presekStanja
