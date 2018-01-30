@@ -4,7 +4,7 @@
 
 Aplikacija za vođenje šanka. Jedna od aplikacija koje pravimo na [kursevima programiranja](https://skolakoda.org/kursevi/) u [Školi koda](https://skolakoda.org/).
 
-Pogledaj kako radi: [mudroljub.github.io/pub-manager](https://mudroljub.github.io/pub-manager/)
+Pogledaj kako radi: [skolakoda.org/pub-manager](https://skolakoda.org/pub-manager/)
 
 Ako si developer možeš doprineti izmenama.
 
