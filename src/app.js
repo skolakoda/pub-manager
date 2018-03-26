@@ -1,3 +1,6 @@
 import Sto from './klase/Sto'
 
-for (let i = 1; i < 7; i++) new Sto(i)
+const brojStolova = 6
+
+for (let i = 1; i <= brojStolova; i++)
+  new Sto(i, document.getElementById('kafana'))

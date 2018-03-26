@@ -2,6 +2,7 @@
   "name": "pub-manager",
   "version": "1.0.0",
   "description": "Pub manager application",
+  "repository": "https://github.com/skolakoda/pub-manager",
   "main": "app.js",
   "scripts": {
     "start": "webpack-dev-server --open",

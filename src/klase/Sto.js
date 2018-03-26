@@ -6,12 +6,19 @@ import presekStanja from '../funkcije/presekStanja'
 const izlaz = document.getElementById('render-aktivni-sto')
 
 export default class Sto {
-  constructor(i) {
-    this.element = document.getElementById(`sto${i}`)
-    this.ime = `Sto ${i}`
+  constructor(br, kafana) {
+    this.napraviElement(br, kafana)
+    this.ime = `Sto ${br}`
     this.pica = []
     this.novaTura = []
     this.element.addEventListener('click', this.otvori.bind(this))
+  }
+
+  napraviElement(br, kafana) {
+    this.element = document.createElement('div')
+    this.element.classList = `sto sto${br}`
+    this.element.innerText = br
+    kafana.appendChild(this.element)
   }
 
   otvori() {
@@ -55,7 +62,7 @@ export default class Sto {
       <h1>${this.ime}</h1>
       <p>DUG: ${this.dug}</p>
       <ul>
-    `;
+    `
     for (const naziv in presek) {
       const komada = presek[naziv]
       izlaz.innerHTML += `<li>${naziv} x ${komada}</li>`
@@ -69,7 +76,7 @@ export default class Sto {
     izlaz.innerHTML = `
       <h1>${this.ime}</h1>
       <ul>
-    `;
+    `
     for (const naziv in presek) {
       const komada = presek[naziv]
       izlaz.innerHTML += `<li>${naziv} x ${komada}</li>`
