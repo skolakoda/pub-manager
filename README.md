@@ -1,10 +1,10 @@
-[![](screen.png)](https://mudroljub.github.io/pub-manager/)
+[![](screen.png)](https://mudroljub.github.io/shank-app/)
 
 # Pub manager
 
 Aplikacija za vođenje šanka. Jedna od aplikacija koje pravimo na [kursevima programiranja](https://skolakoda.org/kursevi/) u [Školi koda](https://skolakoda.org/).
 
-Pogledaj kako radi: [skolakoda.org/pub-manager](https://skolakoda.org/pub-manager/)
+Pogledaj kako radi: [skolakoda.org/shank-app](https://skolakoda.org/shank-app/)
 
 Ako si developer možeš doprineti izmenama.
 
