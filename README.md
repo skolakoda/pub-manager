@@ -1,6 +1,6 @@
 [![](screen.png)](https://mudroljub.github.io/shank-app/)
 
-# Pub manager
+# Shank app
 
 Aplikacija za vođenje šanka. Jedna od aplikacija koje pravimo na [kursevima programiranja](https://skolakoda.org/kursevi/) u [Školi koda](https://skolakoda.org/).
 
